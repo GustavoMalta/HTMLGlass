@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<title>First JavaScript</title>
+	<meta charset="utf-8"/>
+	<script>
+		var quebrado = false;
+			function estadoLampada(estado){
+				if (!quebrado){
+					if (estado == 'quebrada'){	
+						quebrado = true;
+						}
+					document.getElementById("luz").src="_imagens/lampada-" + estado +".jpg";
+				}			
+			}
+	</script>
+</head>
+<body>
+	<h1>JavaScript</h1>
+	<script>
+	var date = new Date().toDateString();
+		document.write("Data: " + date);
+	</script>
+
+	<h1 style= "margin-bottom: 0px">Comando Lampada</h1>
+		<img src="_imagens/lampada-apagada.jpg" id="luz"
+		 onmouseover="estadoLampada('acesa')" 
+		 onmouseleave="estadoLampada('apagada')" 
+		 onclick="estadoLampada('quebrada')"/>
+	<script>
+			
+	</script>
+
+</body>
+</html>
